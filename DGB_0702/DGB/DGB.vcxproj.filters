@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="System">
+      <UniqueIdentifier>{497338ca-911c-4200-82a7-179241248eb6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Holy">
+      <UniqueIdentifier>{5e70ded6-032c-42c3-a617-2667177ad17b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Manager">
+      <UniqueIdentifier>{5f86f8cd-4d4b-460a-b849-4a5cbf2026e6}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="HCCharacter.cpp">
+      <Filter>Holy</Filter>
+    </ClCompile>
+    <ClCompile Include="Main.cpp">
+      <Filter>Holy</Filter>
+    </ClCompile>
+    <ClCompile Include="HCPlayerBase.cpp">
+      <Filter>Holy</Filter>
+    </ClCompile>
+    <ClCompile Include="Input.cpp">
+      <Filter>System</Filter>
+    </ClCompile>
+    <ClCompile Include="HCGameModeManager.cpp">
+      <Filter>Manager</Filter>
+    </ClCompile>
+    <ClCompile Include="HCTitleSeccenManager.cpp">
+      <Filter>Manager</Filter>
+    </ClCompile>
+    <ClCompile Include="HCMainSeccenManager.cpp">
+      <Filter>Manager</Filter>
+    </ClCompile>
+    <ClCompile Include="HCResultSeccenManager.cpp">
+      <Filter>Manager</Filter>
+    </ClCompile>
+    <ClCompile Include="HCSeccenGameModeBase.cpp">
+      <Filter>Manager</Filter>
+    </ClCompile>
+    <ClCompile Include="HCPlayer1.cpp">
+      <Filter>Holy</Filter>
+    </ClCompile>
+    <ClCompile Include="HCPlayer2.cpp">
+      <Filter>Holy</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="HCCharacter.h">
+      <Filter>Holy</Filter>
+    </ClInclude>
+    <ClInclude Include="HCPlayerBase.h">
+      <Filter>Holy</Filter>
+    </ClInclude>
+    <ClInclude Include="Param.h">
+      <Filter>System</Filter>
+    </ClInclude>
+    <ClInclude Include="Umbrella.h">
+      <Filter>System</Filter>
+    </ClInclude>
+    <ClInclude Include="Holy.h">
+      <Filter>System</Filter>
+    </ClInclude>
+    <ClInclude Include="Input.h">
+      <Filter>System</Filter>
+    </ClInclude>
+    <ClInclude Include="HCGameModeManager.h">
+      <Filter>Manager</Filter>
+    </ClInclude>
+    <ClInclude Include="Enum.h">
+      <Filter>System</Filter>
+    </ClInclude>
+    <ClInclude Include="HCTitleSeccenManager.h">
+      <Filter>Manager</Filter>
+    </ClInclude>
+    <ClInclude Include="HCMainSeccenManager.h">
+      <Filter>Manager</Filter>
+    </ClInclude>
+    <ClInclude Include="HCResultSeccenManager.h">
+      <Filter>Manager</Filter>
+    </ClInclude>
+    <ClInclude Include="HCSeccenGameModeBase.h">
+      <Filter>Manager</Filter>
+    </ClInclude>
+    <ClInclude Include="HCPlayer1.h">
+      <Filter>Holy</Filter>
+    </ClInclude>
+    <ClInclude Include="HCPlayer2.h">
+      <Filter>Holy</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+</Project>

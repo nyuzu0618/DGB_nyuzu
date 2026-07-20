@@ -1,0 +1,10 @@
+#pragma once
+#include "DxLib.h"
+#include "Param.h"
+#include "Input.h"
+#include "Math.h"
+#include "Enum.h"
+#include <memory>
+#include <vector>
+#include <list>
+#include <random>

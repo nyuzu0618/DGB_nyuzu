@@ -1,0 +1,7 @@
+<Solution>
+  <Configurations>
+    <Platform Name="x64" />
+    <Platform Name="x86" />
+  </Configurations>
+  <Project Path="DGB/DGB.vcxproj" Id="0d064f1d-35f4-497d-bd56-299f787021f5" />
+</Solution>
