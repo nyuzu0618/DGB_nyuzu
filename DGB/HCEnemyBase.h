@@ -17,7 +17,12 @@ public:
 	void Kill( ) { m_hp = 0; }  // ボールに近距離で当たった時など、即死させたい場合に使う
 
 	// ボールとの当たり判定などで使う、敵の現在座標
-	HSPoint GetPosition( ) const { return m_position1; }
+	// 修正: 見た目の矩形(m_position1〜m_position2)の左上角(m_position1)をそのまま返すと、
+	// 判定円が矩形の中心からズレてしまい、見た目上重なっていても外れ判定になることがあった。
+	// そのため矩形の中心座標を返すように変更（Ball.cpp側の当たり判定と見た目を一致させるため）。
+	HSPoint GetPosition( ) const {
+		return HSPoint( ( m_position1.nX + m_position2.nX ) / 2, ( m_position1.nY + m_position2.nY ) / 2 );
+	}
 
 	// ルートを設定する（派生クラスや外部から呼ぶ）
 	void setRoute( const std::vector<HSPoint>& route );
