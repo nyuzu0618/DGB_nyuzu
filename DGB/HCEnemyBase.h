@@ -27,6 +27,14 @@ public:
 	// ルートを設定する（派生クラスや外部から呼ぶ）
 	void setRoute( const std::vector<HSPoint>& route );
 
+	// 当たり判定用の矩形範囲（見た目の矩形と同じ m_position1〜m_position2）
+	HSPoint GetBoundsMin() const {
+		return HSPoint((std::min)(m_position1.nX, m_position2.nX), (std::min)(m_position1.nY, m_position2.nY));
+	}
+	HSPoint GetBoundsMax() const {
+		return HSPoint((std::max)(m_position1.nX, m_position2.nX), (std::max)(m_position1.nY, m_position2.nY));
+	}
+
 protected:
 	// ルートに沿って座標を更新する共通処理
 	// （HCEnemy1 / HCEnemy2 それぞれの update() から呼び出す想定）

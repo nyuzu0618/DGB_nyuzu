@@ -14,6 +14,7 @@ public:
 		g_pEnemyManager = this;
 	}
 
+
 	// countで指定した数だけHCEnemy1をまとめて出現させる（省略時は1体。全員Umbrella.hのデフォルトルート）
 	void spawnEnemy1( int count = 1 ) {
 		for ( int i = 0; i < count; i++ ) {
@@ -56,19 +57,26 @@ public:
 		}
 	}
 
+
 	// ボールと当たっている敵を1体探して返す（いなければnullptr）
 	// posはボールの座標、radiusは当たり判定の半径
-	HCEnemyBase* CheckCollision( const HSPoint& pos, int radius ) const {
-		for ( const auto& e : enemies ) {
-			if ( e->isDead( ) ) continue;
+	HCEnemyBase* CheckCollision(const HSPoint& pos, int radius) const {
+		for (const auto& e : enemies) {
+			if (e->isDead()) continue;
 
-			HSPoint enemyPos = e->GetPosition( );
-			int dx = enemyPos.nX - pos.nX;
-			int dy = enemyPos.nY - pos.nY;
+			HSPoint boundsMin = e->GetBoundsMin();
+			HSPoint boundsMax = e->GetBoundsMax();
+
+			// ボール中心に最も近い、矩形上の点（クランプ）
+			int closestX = std::clamp(pos.nX, boundsMin.nX, boundsMax.nX);
+			int closestY = std::clamp(pos.nY, boundsMin.nY, boundsMax.nY);
+
+			int dx = closestX - pos.nX;
+			int dy = closestY - pos.nY;
 			int distSq = dx * dx + dy * dy;
 
-			if ( distSq <= radius * radius ) {
-				return e.get( );
+			if (distSq <= radius * radius) {
+				return e.get();
 			}
 		}
 		return nullptr;
