@@ -14,7 +14,7 @@ void HCTitleSeccenManager::TitleToChangeGameModeRequest() {
 
     // 📝 3. GetInstance() を経由してゲームモードを切り替える
     // (※もし特定のモードに切り替えるなら SetGameMode(EGameMode::MainGame) などの場合もあります)
-    HCGameModeManager::GetInstance().ChangeGameMode(EGameMode::Main);
+    HCGameModeManager::GetInstance().ChangeGameMode(EGameMode::Select);
 }
 
 void HCTitleSeccenManager::draw() {

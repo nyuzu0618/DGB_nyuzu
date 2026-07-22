@@ -3,6 +3,7 @@
 #include "HCTitleSeccenManager.h"
 #include "HCMainSeccenManager.h"
 #include "HCResultSeccenManager.h"
+#include "HCSelectSeccenManager.h"
 
 #include <typeinfo>
 #include <windows.h>
@@ -41,6 +42,9 @@ void HCGameModeManager::SetGameMode(EGameMode SetToGameMode)
     {
     case EGameMode::Title:
         m_pCurrentScene = new HCTitleSeccenManager();
+        break;
+    case EGameMode::Select:                          // 追加
+        m_pCurrentScene = new HCSelectSeccenManager(); // 追加
         break;
     case EGameMode::Main:
         m_pCurrentScene = new HCMainSeccenManager();

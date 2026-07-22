@@ -58,6 +58,7 @@
       <Filter>Holy</Filter>
     </ClCompile>
     <ClCompile Include="Ball.cpp" />
+    <ClCompile Include="HCSelectSeccenManager.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="HCCharacter.h">
@@ -115,6 +116,7 @@
       <Filter>Holy</Filter>
     </ClInclude>
     <ClInclude Include="Ball.h" />
+    <ClInclude Include="HCSelectSeccenManager.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

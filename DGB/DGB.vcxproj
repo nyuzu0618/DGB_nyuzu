@@ -143,6 +143,7 @@
     <ClInclude Include="HCPlayer2.h" />
     <ClInclude Include="HCPlayerBase.h" />
     <ClInclude Include="HCResultSeccenManager.h" />
+    <ClInclude Include="HCSelectSeccenManager.h" />
     <ClInclude Include="HCTitleSeccenManager.h" />
     <ClInclude Include="Holy.h" />
     <ClInclude Include="Input.h" />
@@ -163,6 +164,7 @@
     <ClCompile Include="HCPlayer2.cpp" />
     <ClCompile Include="HCPlayerBase.cpp" />
     <ClCompile Include="HCResultSeccenManager.cpp" />
+    <ClCompile Include="HCSelectSeccenManager.cpp" />
     <ClCompile Include="HCTitleSeccenManager.cpp" />
     <ClCompile Include="Input.cpp" />
     <ClCompile Include="Main.cpp" />
