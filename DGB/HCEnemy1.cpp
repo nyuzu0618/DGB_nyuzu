@@ -38,9 +38,9 @@ void HCEnemy1::setup( const std::vector<int>& routeLabels ) {
 	setRoute( route );
 
 	// Enemy1固有の初期サイズ（当たり判定の矩形サイズ）を設定（ルート先頭を初期位置に）
-	m_position1.Set( route[ 0 ].nX, route[ 0 ].nY );
+	m_position1.Set( route[ 0 ].nX , route[ 0 ].nY );
 	// 修正: サイズをハードコード(32x32)からParam.hのg_enemy_width/g_enemy_height（横60・縦120）に変更
-	m_position2.Set(m_position1.nX + g_enemy_width, m_position1.nY + g_enemy_height);
+	m_position2.Set(m_position1.nX + g_enemy_width / 2, m_position1.nY + g_enemy_height / 2);
 
 	// 基底クラスのsetup()でルート先頭に配置・HP初期化などを行う
 	HCEnemyBase::setup( );
@@ -50,5 +50,5 @@ void HCEnemy1::setup( const std::vector<int>& routeLabels ) {
 
 void HCEnemy1::draw( ) {
 	// Enemy1の見た目（仮の矩形描画。画像に差し替える場合はここを変更）
-	DrawBox( m_position1.nX, m_position1.nY, m_position2.nX, m_position2.nY, GetColor( 255, 0, 0 ), TRUE );
+	DrawBox( m_position1.nX - g_enemy_width / 2, m_position1.nY - g_enemy_height / 2, m_position2.nX , m_position2.nY , GetColor( 255, 0, 0 ), TRUE );
 }
